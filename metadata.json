@@ -1,0 +1,6 @@
+{
+  "name": "LARVOX",
+  "description": "Lorapok AI Response & Voice Operating eXperience - A God-Mode system assistant for Ubuntu with voice control, offline NLU, and proactive intelligence.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

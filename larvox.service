@@ -1,0 +1,14 @@
+[Unit]
+Description=LARVOX Contextual Voice Assistant Daemon
+After=network.target sound.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/larvox
+ExecStart=%h/larvox/.venv/bin/python -m larvox_core.daemon
+Restart=on-failure
+RestartSec=5
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=default.target

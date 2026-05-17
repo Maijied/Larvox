@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --color-neon-light: #d9f99d;
+  --color-neon: #a3e635;
+  --color-neon-dark: #65a30d;
+  --color-dark-bg: #09090b;
+  --color-panel-bg: #0c0c0e;
+  --color-card-bg: rgba(24, 24, 27, 0.5);
+  --color-card-border: #27272a;
+  --font-sans: "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "Courier New", Courier, monospace;
+}
+
+@custom-variant dark (&:is(.dark *));
+
+body {
+  @apply bg-dark-bg text-zinc-100 font-sans antialiased;
+}
+
+.larva-glow {
+  box-shadow: 0 0 15px rgba(163, 230, 53, 0.1);
+}
+
+.border-glass {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@keyframes scan {
+  0% {
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh);
+    opacity: 0;
+  }
+}
