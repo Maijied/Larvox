@@ -6,6 +6,9 @@ import {defineConfig, loadEnv} from 'vite';
 export default defineConfig(({mode}) => {
   const env = loadEnv(mode, '.', '');
   return {
+    // GitHub Pages URL is: https://maijied.github.io/Larvox/
+    // Ensures built asset URLs match the repo subpath.
+    base: '/Larvox/',
     plugins: [react(), tailwindcss()],
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
